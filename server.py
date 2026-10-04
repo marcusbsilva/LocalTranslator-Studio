@@ -39,7 +39,7 @@ def build_app(engine=None):
         return items,batch
     @app.get('/')
     def home():return render_template('index.html',page='translate',title='Translate')
-    @app.get('/docs')
+    @app.get('/docs', strict_slashes=False)
     def docs():return render_template('docs.html',page='docs',title='API Guide')
     @app.get('/models')
     def models():return render_template('models.html',page='models',title='Models',state=translator.status(),languages=LANGUAGES,management_token=management_token)
@@ -49,6 +49,11 @@ def build_app(engine=None):
     def licenses():return render_template('licenses.html',page='about',title='Licenses',notices=(ROOT/'THIRD-PARTY-NOTICES.md').read_text(encoding='utf-8'))
     @app.get('/studio/assets/<path:name>')
     def assets(name):return send_from_directory(ROOT/'web',name)
+    @app.get('/favicon.ico')
+    def favicon():
+        response=send_from_directory(ROOT/'web','favicon.ico')
+        response.headers['Cache-Control']='no-cache, max-age=0'
+        return response
     @app.get('/languages')
     def languages():
         with translator.lock:return jsonify([{'code':code,'name':name,'targets':list(LANGUAGES)} for code,name in LANGUAGES.items()])
