@@ -194,35 +194,7 @@ As versões estão fixadas em `requirements.txt`. Fontes e arquivos locais dispe
 
 Os downloads padrão usam hashes SHA-256 incluídos. Modelos adicionais sem hash incluído registram o hash do primeiro download HTTPS oficial para conferir cópias posteriores; esse registro local não é uma verificação independente do publicador. As licenças dos modelos/tokenizadores são preservadas. Origem do catálogo: [índice de modelos Argos](https://github.com/argosopentech/argospm-index).
 
-## Atualização e solução de problemas
-
-No Studio 2.x, encerre o servidor e substitua os arquivos do aplicativo preservando `data` e `.venv`. Para aplicativos anteriores, extraia em uma pasta nova e copie apenas `data`; não copie o ambiente antigo. O inicializador recria ambientes obsoletos e reaproveita arquivos válidos.
-
-| Problema | Solução |
-|---|---|
-| Modelos ausentes ou com erro | Models → Repair ou `--setup-only` |
-| Download interrompido | Repita a mesma operação de instalação |
-| Idioma novo não aparece em Translate | Atualize essa aba após a conclusão |
-| Outra operação em andamento | Aguarde a operação web/CLI terminar |
-| Erro de DLL no Windows | Verifique Python x64 e Visual C++ 2015–2022 x64 |
-| Porta ocupada | Inicie com `--port 5001` |
-| Token expirou após reiniciar o servidor | Atualize Models |
-
 Reserve vários GB para modelos, arquivos baixados e dependências; idiomas adicionais exigem mais espaço. 8 GB de RAM são um ponto de partida prático, não um mínimo universal. GPU não é necessária.
-
-## Desenvolvimento e GitHub
-
-Para um repositório independente, publique o **conteúdo da pasta do aplicativo**, deixando `README.md`, `server.py`, `.github` e `docs` na raiz. `.gitignore` exclui ambientes, modelos, caches e logs. Não publique `data` ou `.venv`.
-
-```sh
-python -m pip install -r requirements.txt
-python -m unittest discover -s tests -v
-python -m compileall -q engine.py server.py install_models.py language_registry.py model_manager.py
-```
-
-O workflow GitHub Actions executa testes de gerenciamento e checagens de sintaxe no Linux com Python 3.10 e 3.12, sem baixar modelos neurais. Ele foi preparado para o repositório, mas não foi executado no GitHub nesta sessão. Consulte [CONTRIBUTING.md](CONTRIBUTING.md), [CHANGELOG.md](CHANGELOG.md) e [VALIDATION.md](VALIDATION.md).
-
-Os testes reais na VM incluem tradução offline, instalação/remoção pela web, tradução automática, ambos os temas e páginas responsivas. A revisão do BAT e a resolução de dependências Windows foram registradas separadamente; não foi executado um teste de runtime no Windows.
 
 ## Licença e créditos
 
