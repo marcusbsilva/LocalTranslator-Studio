@@ -196,11 +196,6 @@ Default downloads use bundled SHA-256 receipts. Optional archives without bundle
 
 Allow several GB of disk space for default archives, extracted weights and dependencies; more for additional languages. 8 GB RAM is a practical starting point, not a universal minimum. No GPU is required.
 
-
-A GitHub Actions workflow runs management tests and syntax checks on Linux with Python 3.10 and 3.12. It does not download neural models. This workflow is supplied for your repository; it has not been executed on GitHub here. See [CONTRIBUTING.md](CONTRIBUTING.md), [CHANGELOG.md](CHANGELOG.md) and [VALIDATION.md](VALIDATION.md).
-
-Actual VM checks include offline routes, web model installation/removal, automatic translation, both themes and responsive pages. Windows launcher review and dependency resolution are recorded separately; Windows runtime execution is not claimed.
-
 ## License and credits
 
 Application source and interface: [AGPL-3.0](LICENSE). Model weights, dependencies and fonts retain their own licenses; see [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md), `model-notices` and `web/fonts`. The footer offers a source ZIP excluding local models and environments.
