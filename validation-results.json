@@ -1,0 +1,220 @@
+{
+  "status": {
+    "dailyQuota": null,
+    "engine": "CTranslate2",
+    "expectedModelCount": 18,
+    "installed": [
+      "zt_en",
+      "zh_en",
+      "en_zh",
+      "en_zt",
+      "en_fr",
+      "en_ja",
+      "en_pt",
+      "en_ru",
+      "en_es",
+      "en_th",
+      "en_vi",
+      "fr_en",
+      "ja_en",
+      "pt_en",
+      "ru_en",
+      "es_en",
+      "th_en",
+      "vi_en"
+    ],
+    "local": true,
+    "maxBatchItems": 30,
+    "maxCharactersPerItem": 64000,
+    "missing": [],
+    "modelCount": 18,
+    "ready": true,
+    "version": "2.0.0"
+  },
+  "results": [
+    {
+      "source": "zh-Hans",
+      "target": "en",
+      "input": "共享给我的文件夹",
+      "output": "Share folders for me",
+      "seconds": 0.15
+    },
+    {
+      "source": "en",
+      "target": "zh-Hans",
+      "input": "This is my folder.",
+      "output": "这是我的文件夹。",
+      "seconds": 0.12
+    },
+    {
+      "source": "zh-Hant",
+      "target": "en",
+      "input": "這是我的資料夾。",
+      "output": "This is my folder.",
+      "seconds": 0.17
+    },
+    {
+      "source": "en",
+      "target": "zh-Hant",
+      "input": "This is my folder.",
+      "output": "這是我的資料夾。",
+      "seconds": 0.15
+    },
+    {
+      "source": "vi",
+      "target": "en",
+      "input": "Đây là thư mục của tôi.",
+      "output": "This is my directory.",
+      "seconds": 0.16
+    },
+    {
+      "source": "en",
+      "target": "vi",
+      "input": "This is my folder.",
+      "output": "Đây là thư mục của tôi.",
+      "seconds": 0.16
+    },
+    {
+      "source": "th",
+      "target": "en",
+      "input": "นี่คือโฟลเดอร์ของฉัน",
+      "output": "This is my folder.",
+      "seconds": 0.18
+    },
+    {
+      "source": "en",
+      "target": "th",
+      "input": "This is my folder.",
+      "output": "นี่คือโฟลเดอร์ของผม",
+      "seconds": 0.12
+    },
+    {
+      "source": "ru",
+      "target": "en",
+      "input": "Это моя папка.",
+      "output": "That's my file.",
+      "seconds": 0.24
+    },
+    {
+      "source": "en",
+      "target": "ru",
+      "input": "This is my folder.",
+      "output": "Это моя папка.",
+      "seconds": 0.22
+    },
+    {
+      "source": "pt",
+      "target": "en",
+      "input": "Esta é a minha pasta.",
+      "output": "This is my briefcase.",
+      "seconds": 0.13
+    },
+    {
+      "source": "en",
+      "target": "pt",
+      "input": "This is my folder.",
+      "output": "Esta é a minha pasta.",
+      "seconds": 0.14
+    },
+    {
+      "source": "es",
+      "target": "en",
+      "input": "Esta es mi carpeta.",
+      "output": "This is my folder.",
+      "seconds": 0.49
+    },
+    {
+      "source": "en",
+      "target": "es",
+      "input": "This is my folder.",
+      "output": "Esta es mi carpeta.",
+      "seconds": 0.13
+    },
+    {
+      "source": "fr",
+      "target": "en",
+      "input": "Ceci est mon dossier.",
+      "output": "This is my file.",
+      "seconds": 0.15
+    },
+    {
+      "source": "en",
+      "target": "fr",
+      "input": "This is my folder.",
+      "output": "Voici mon dossier.",
+      "seconds": 0.13
+    },
+    {
+      "source": "ja",
+      "target": "en",
+      "input": "これは私のフォルダーです。",
+      "output": "This is my folder.",
+      "seconds": 0.15
+    },
+    {
+      "source": "en",
+      "target": "ja",
+      "input": "This is my folder.",
+      "output": "フォルダです。",
+      "seconds": 0.14
+    },
+    {
+      "detectedLanguage": {
+        "confidence": 50.0,
+        "language": "zh-Hans"
+      },
+      "route": [
+        "zh-Hans",
+        "en",
+        "pt"
+      ],
+      "translatedText": "Compartilhar pastas para mim"
+    },
+    {
+      "detectedLanguage": {
+        "confidence": 50.0,
+        "language": "zh-Hans"
+      },
+      "route": [
+        "zh-Hans",
+        "en",
+        "es"
+      ],
+      "translatedText": "Compartir carpetas para mí"
+    },
+    {
+      "detectedLanguage": {
+        "confidence": 50.0,
+        "language": "zh-Hans"
+      },
+      "route": [
+        "zh-Hans",
+        "en",
+        "fr"
+      ],
+      "translatedText": "Partager des dossiers pour moi"
+    }
+  ],
+  "batch": {
+    "routes": [
+      [
+        "en",
+        "pt"
+      ],
+      [
+        "en",
+        "pt"
+      ],
+      [
+        "en",
+        "pt"
+      ]
+    ],
+    "translatedText": [
+      "Olá.",
+      "Bom dia.",
+      ""
+    ]
+  },
+  "whitespace": "  Olá.\n\nBom dia.  "
+}
