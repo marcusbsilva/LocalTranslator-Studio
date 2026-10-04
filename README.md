@@ -194,31 +194,8 @@ Exact dependencies are pinned in `requirements.txt`. Bundled fonts and assets ke
 
 Default downloads use bundled SHA-256 receipts. Optional archives without bundled hashes record the first official HTTPS download's hash for subsequent integrity checks; that local receipt is not independent publisher verification. Original weights/tokenizer notices are preserved. Catalogue source: [Argos model index](https://github.com/argosopentech/argospm-index).
 
-## Upgrade and troubleshooting
-
-For Studio 2.x, stop the server and replace application files, preserving `data` and `.venv`. For older applications, extract into a fresh directory and copy only the previous `data`; do not copy the old environment. The launcher rebuilds an obsolete runtime and reuses valid model archives.
-
-| Issue | Action |
-|---|---|
-| Missing or broken models | Models → Repair, or run `--setup-only` |
-| Download interrupted | Repeat the same installation operation |
-| New language absent in Translate | Reload the Translate tab after completion |
-| Another operation is running | Wait for the existing web/CLI job to finish |
-| Windows DLL loading error | Check Python x64 and the Visual C++ 2015–2022 x64 runtime |
-| Port already in use | Start with `--port 5001` |
-| Management token expired after server restart | Reload Models |
-
 Allow several GB of disk space for default archives, extracted weights and dependencies; more for additional languages. 8 GB RAM is a practical starting point, not a universal minimum. No GPU is required.
 
-## Development and GitHub
-
-For a standalone repository, commit the **contents of the application directory** so `README.md`, `server.py`, `.github` and `docs` are at the repository root. `.gitignore` excludes environments, models, caches and logs. Do not commit `data` or `.venv`.
-
-```sh
-python -m pip install -r requirements.txt
-python -m unittest discover -s tests -v
-python -m compileall -q engine.py server.py install_models.py language_registry.py model_manager.py
-```
 
 A GitHub Actions workflow runs management tests and syntax checks on Linux with Python 3.10 and 3.12. It does not download neural models. This workflow is supplied for your repository; it has not been executed on GitHub here. See [CONTRIBUTING.md](CONTRIBUTING.md), [CHANGELOG.md](CHANGELOG.md) and [VALIDATION.md](VALIDATION.md).
 
