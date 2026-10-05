@@ -200,4 +200,4 @@ Allow several GB of disk space for default archives, extracted weights and depen
 
 Application source and interface: [AGPL-3.0](LICENSE). Model weights, dependencies and fonts retain their own licenses; see [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md), `model-notices` and `web/fonts`. The footer offers a source ZIP excluding local models and environments.
 
-Created for Marcus Silva's development portfolio. Related project: [Hybrid Translator](https://github.com/marcusbsilva/Hybrid-web-translator).
+Related project: [Hybrid Translator](https://github.com/marcusbsilva/Hybrid-web-translator).
